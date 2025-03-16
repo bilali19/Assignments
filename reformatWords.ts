@@ -15,9 +15,7 @@ function reformatWords(words: string[]): string {
     case 2:
       return `${filteredWords[0]} and ${filteredWords[1]}`
     default:
-      const allButLastWord = filteredWords.slice(0, -1).join(", ");
-      const lastWord = filteredWords[filteredWords.length - 1];
-      return `${allButLastWord} and ${lastWord}`;
+      return `${filteredWords.slice(0, -1).join(", ")} and ${filteredWords[filteredWords.at(-1)}`;
   }
 }
 
